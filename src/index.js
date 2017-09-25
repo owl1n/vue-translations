@@ -11,3 +11,8 @@ const install = (Vue, transObj = {}) => {
         install(window.Vue);
     }
 };
+
+module.exports = {
+    version: '0.1.0',
+    install
+};
