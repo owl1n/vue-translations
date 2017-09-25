@@ -1,6 +1,6 @@
 {
   "name": "vue-translations",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Translataion for your VueJS2 application. (like as laravel translations)",
   "main": "src/index.js",
   "scripts": {
