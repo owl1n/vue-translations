@@ -1,6 +1,6 @@
 {
   "name": "vue-translations",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Translataion for your VueJS2 application. (like as laravel translations)",
   "main": "src/index.js",
   "scripts": {
@@ -23,7 +23,8 @@
     "src/packages"
   ],
   "peerDependencies": {
-    "vue": "^2.3.3"
+    "vue": "^2.5.16",
+    "lodash": "^4.17.10"
   },
   "unpkg": "src/index.js",
   "author": "Markin Maxim",
@@ -31,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/owl1n/vue-translations/issues"
   },
-  "homepage": "https://github.com/owl1n/vue-translations#readme"
+  "homepage": "https://github.com/owl1n/vue-translations#readme",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
 }
