@@ -97,6 +97,8 @@ const Translator = {
       });
       
       Vue.prototype.$translate = component;
+      // simple use
+      Vue.prototype.__t = component.translate;
     }
   },
 };
