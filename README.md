@@ -1,7 +1,9 @@
 ## VueJs Translations :shipit:
 
 Hello everybody! I'm glad to present you a library to support the translations in your Vue project.
+
 This translations component is very similar to Laravel Translations. You can setup inline params in your locale if needed.
+
 Installation is very simple, in a few steps:
 
 ```shell
