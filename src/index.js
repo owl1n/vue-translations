@@ -1,13 +1,36 @@
-import Translator from './packages/translations'
+let component = null;
 
-export const install = (Vue, transObj = {}) => {
-    if (install.installed) return;
-    install.installed = true;
+const Translator = {
+  install(Vue) {
+    if (!component) {
+      component = new Vue({
+        data() {
+          return {
+            language: '',
+            translations: {},
+          }
+        },
+        methods: {
+          setLang(lang) {
+            this.language = lang;
+          },
 
-    Vue.prototype.$trans = Translator.trans;
-    Vue.prototype.$transObject = transObj;
-
-    if (typeof window !== 'undefined' && window.Vue) {
-        install(window.Vue);
+          load(object) {
+            this.translations = object;
+          }
+        }
+      });
+      
+      Vue.prototype.$translate = component;
     }
+  },
 };
+
+if (typeof exports === 'object') {
+  module.exports = Translator; // CommonJS
+} else if (typeof define === 'function' && define.amd) {
+  define([], function () { return Translator; }); // AMD
+} else if (window.Vue) {
+  window.Translator = Translator; // Browser (not required options)
+  Vue.use(Translator);
+}
