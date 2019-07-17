@@ -28,20 +28,18 @@ export default {
 ```
 
 ```javascript
-import VueTranslation from 'vue-translations'
+import VueTranslations from 'vue-translations'
 import locales from './locales.js';
 
 Vue.use(VueTranslations);
 
 new Vue({
     mounted() {
-        // setup from one method
-        this.$translations.setup('en', locales);
+        this.$translate.setup("en", locales);
         // another methods:
         // change current language
-        this.$translations.setLang('en');
+        this.$translate.setLang('en');
         // load locales
-        this.$translations.load(locales);
     },
     render: (h) => h,
 });
