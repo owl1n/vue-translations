@@ -28,7 +28,7 @@ export default {
 ```
 
 ```javascript
-import VueTranslation from 'vue-translations'
+import VueTranslations from 'vue-translations'
 import locales from './locales.js';
 
 Vue.use(VueTranslations);
