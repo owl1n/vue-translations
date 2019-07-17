@@ -40,6 +40,7 @@ new Vue({
         // change current language
         this.$translate.setLang('en');
         // load locales
+        this.$translate.load(locales);
     },
     render: (h) => h,
 });
